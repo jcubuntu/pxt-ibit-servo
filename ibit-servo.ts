@@ -12,10 +12,12 @@ enum ServoCH {
 
 //% weight=100 color=#0fbc11 icon=""
 namespace iBitServo {
-    /** Angle between 1 to 180.
-     * @param goDeg percent of maximum Angle, eg: 90
+
+    /**
+     * @param goDeg target servo angle as degree, eg:90
      */
     //% block="setServo CH:%ch|Angle:%goDeg"
+    //% goDeg.min=1 goDeg.max=180
     export function setServo(ch: ServoCH, goDeg: number): void {
         goDeg = Math.map(goDeg, 1, 180, 1000, 2000)
         if (ch == ServoCH.Servo1) {
