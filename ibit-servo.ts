@@ -1,3 +1,7 @@
+/**
+ * This Extension for contorl iBit board servo and motor at same time
+ * By Pakpoom Eiamsouyngam
+ */
 enum ServoCH {
     //% block="one"
     Servo1 = 1,
@@ -6,14 +10,10 @@ enum ServoCH {
 
 }
 
-/**
- * Custom blocks
- */
 //% weight=100 color=#0fbc11 icon=""
 namespace iBitServo {
-    /**
-     * TODO: describe your function here
-     * @param e describe parameter here
+    /** Angle between 1 to 180.
+     * @param goDeg percent of maximum Angle, eg: 90
      */
     //% block="setServo CH:%ch|Angle:%goDeg"
     export function setServo(ch: ServoCH, goDeg: number): void {
