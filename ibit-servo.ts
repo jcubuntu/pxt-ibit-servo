@@ -10,7 +10,7 @@ enum ServoCH {
 
 }
 
-//% weight=100 color=#0fbc11 icon=""
+//% weight=60 color=#0fbc11 icon="\uf135"
 namespace iBitServo {
 
     /**
@@ -24,22 +24,22 @@ namespace iBitServo {
         if (ch == ServoCH.Servo1) {
             for (let i = 0; i < 2; i++) {
                 pins.digitalWritePin(DigitalPin.P8, 1)
-                control.waitMicros(goDeg)
+                control.waitMicros(angle)
                 pins.digitalWritePin(DigitalPin.P8, 0)
                 basic.pause(20)
                 pins.digitalWritePin(DigitalPin.P8, 1)
-                control.waitMicros(goDeg)
+                control.waitMicros(angle)
                 pins.digitalWritePin(DigitalPin.P8, 0)
                 basic.pause(20)
             }
         } else if (ch == ServoCH.Servo2) {
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 2; i++) {
                 pins.digitalWritePin(DigitalPin.P12, 1)
-                control.waitMicros(goDeg)
+                control.waitMicros(angle)
                 pins.digitalWritePin(DigitalPin.P12, 0)
                 basic.pause(20)
                 pins.digitalWritePin(DigitalPin.P12, 1)
-                control.waitMicros(goDeg)
+                control.waitMicros(angle)
                 pins.digitalWritePin(DigitalPin.P12, 0)
                 basic.pause(20)
             }
