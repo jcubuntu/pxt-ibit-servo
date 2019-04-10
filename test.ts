@@ -1,1 +1,5 @@
-// tests go here; this will not be compiled when this package is used as a library
+iBitServo.setServo(ServoCH.Servo1, 90)
+basic.pause(500)
+iBitServo.setServo(ServoCH.Servo1, 180)
+basic.pause(500)
+iBitServo.setServo(ServoCH.Servo1, 90)
