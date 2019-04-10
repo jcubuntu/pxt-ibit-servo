@@ -10,7 +10,7 @@ enum ServoCH {
 
 }
 
-//% weight=60 color=#0fbc11 icon="\uf135"
+//% weight=45 color=#0fbc11 icon="\uf135"
 namespace iBitServo {
 
     /**
@@ -19,7 +19,7 @@ namespace iBitServo {
     //% block="setServo CH:%ch|Angle:%goDeg"
     //% goDeg.min=1 goDeg.max=180
     export function setServo(ch: ServoCH, goDeg: number): void {
-        let angle=0
+        let angle = 0
         angle = Math.map(goDeg, 1, 180, 1000, 2000)
         if (ch == ServoCH.Servo1) {
             for (let i = 0; i < 2; i++) {
